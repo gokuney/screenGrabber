@@ -1,0 +1,21 @@
+{
+  "name": "node-newser",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Priyanshu Sharma <priyanshu.sharma@rsystems.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io": "^2.2.0",
+    "jquery": "^3.4.1"
+  }
+}

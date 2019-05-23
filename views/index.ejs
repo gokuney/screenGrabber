@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Election Result</title>
+    <script src="/socket.js"></script>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div>
+        <img src="" alt="Loading...Please wait" id="screen-result"/>
+    </div>
+    <script>
+         var socket = io();
+         socket.on('feed', function(data){
+             var screen = data.screen,
+                 ts     = data.ts;
+                
+            //apply screen
+            var d = new Date();
+             jQuery('#screen-result').attr('src', `/screenshots/${screen}?time=${d.getTime()}`);
+         })
+    </script>
+</body>
+</html>
